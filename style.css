@@ -1,0 +1,56 @@
+
+h1{
+    color:rgba(255, 0, 34, 0.811);
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial,sans-serif;
+}
+p{
+  font-weight: bold;
+  text-align: right;
+  margin-right: 90px;
+  font-size: 26px;
+}
+.memory {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    gap: 20px; 
+    max-width: 600px; 
+    margin: auto; 
+    padding: 10px; 
+  }
+  
+
+  .memory-card {
+    position: relative;
+    width: 100%; 
+    height: 150px; 
+    cursor: pointer;
+    perspective: 1000px; 
+  }
+  
+  .memory-card .front,
+  .memory-card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+  }
+  
+  .memory-card .front {
+    z-index: 2; 
+    transform: rotateY(0deg); 
+  }
+  .memory-card .back {
+    transform: rotateY(180deg); 
+  }
+  
+  .memory-card.flip .front {
+    transform: rotateY(180deg); 
+  }
+  
+  .memory-card.flip .back {
+    transform: rotateY(0deg); 
+  }
+  
